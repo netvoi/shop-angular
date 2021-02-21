@@ -1,0 +1,49 @@
+<ul class="menu">
+  <li class="menu__item">
+    <a
+      [routerLink]="['/product/guitars']"
+      [ngClass]="{active: product === 'guitars'}"
+      class="menu__item-link menu__item-guitars"
+    >Guitars</a>
+  </li>
+
+  <li class="menu__item">
+    <a
+      [routerLink]="['/product/strings']"
+      [ngClass]="{active: product === 'strings'}"
+      class="menu__item-link menu__item-strings"
+    >Strings</a>
+  </li>
+
+  <li class="menu__item">
+    <a
+      [routerLink]="['/product/ukulele']"
+      [ngClass]="{active: product === 'ukulele'}"
+      class="menu__item-link menu__item-ukulele"
+    >Ukulele</a>
+  </li>
+
+  <li class="menu__item">
+    <a
+      [routerLink]="['/product/basses']"
+      [ngClass]="{active: product === 'basses'}"
+      class="menu__item-link menu__item-basses"
+    >Basses</a>
+  </li>
+
+  <li class="menu__item">
+    <a
+      [routerLink]="['/product/keys']"
+      [ngClass]="{active: product === 'keys'}"
+      class="menu__item-link menu__item-keys"
+    >Keys</a>
+  </li>
+
+  <li class="menu__item">
+    <a
+      [routerLink]="['/product/drums']"
+      [ngClass]="{active: product === 'drums'}"
+      class="menu__item-link menu__item-drums"
+    >Drums</a>
+  </li>
+</ul>

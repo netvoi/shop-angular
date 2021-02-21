@@ -1,0 +1,50 @@
+<div class="cards__header">
+
+  <div class="cards__filter">
+    <label for="sidebar__filter">sort by</label>
+    <select
+      name="filter"
+      id="sidebar__filter"
+      [(ngModel)]="selectedFilter"
+      (change)="sortCards(selectedFilter)"
+    >
+      <option
+        *ngFor="let f of filter"
+        [ngValue]="f.id"
+      >{{f.value}}</option>
+    </select>
+  </div>
+
+  <div class="cards__order">
+    <button
+      class="cards__order-btn cards__order-btn--inline btn"
+      [ngClass]="{'btn__active': !grid}"
+      (click)="notGridLayout()"
+    ></button>
+    <button
+      class="cards__order-btn cards__order-btn--grid btn"
+      [ngClass]="{'btn__active': grid}"
+      (click)="gridLayout()"
+    ></button>
+  </div>
+</div>
+
+<div
+  class="cards__row"
+  *ngIf="grid; else notGrid"
+>
+  <app-card
+    class="card"
+    *ngFor="let card of cardService.cards"
+    [card]="card"
+    [grid]="grid"
+  ></app-card>
+</div>
+
+<ng-template #notGrid>
+  <app-card
+    *ngFor="let card of cardService.cards"
+    [card]="card"
+    [grid]="grid"
+  ></app-card>
+</ng-template>

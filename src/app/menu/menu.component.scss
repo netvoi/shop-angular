@@ -1,0 +1,97 @@
+@import '../../assets/scss/vars';
+
+.menu {
+  padding: 6rem 0 1rem;
+  margin-top: $nav-height;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__item {
+  position: relative;
+  width: 60px;
+
+  &-link {
+    display: inline-block;
+
+    width: 60px;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    color: #787885;
+    text-decoration: none;
+    text-align: center;
+
+    transition: color .2s linear, font-weight .2s linear;
+
+    &:hover {
+      color: #2979FF;
+      font-weight: 500;
+    }
+
+    &:before {
+      content: '';
+
+      margin: 0 auto;
+      display: inline-block;
+
+      position: absolute;
+      bottom: 2.5rem;
+      left: 0;
+      right: 0;
+
+      width: 30px;
+      height: 30px;
+
+      background-repeat: no-repeat;
+      background-size: 30px;
+      background-position: center;
+    }
+  }
+
+  &-guitars {
+    &:before {
+      background-image: url('../../assets/guitar.svg');
+    }
+  }
+
+  &-strings {
+    &:before {
+      background-image: url('../../assets/violin.svg');
+    }
+  }
+
+  &-ukulele {
+    &:before {
+      background-image: url('../../assets/ukelele.svg');
+    }
+  }
+
+  &-basses {
+    &:before {
+      background-image: url('../../assets/bass.svg');
+    }
+  }
+
+  &-keys {
+    &:before {
+      background-image: url('../../assets/piano.svg');
+    }
+  }
+
+  &-drums {
+    &:before {
+      background-image: url('../../assets/drums.svg');
+    }
+  }
+}
+
+.active {
+  color: #2979FF;
+  font-weight: 500;
+}
